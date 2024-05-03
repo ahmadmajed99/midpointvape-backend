@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 const contactUs = asyncHandler(async (req, res) => {
   const { fullName, phoneNumber, email, message } = req.body;
   console.log("Received data:", req.body);
+
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.office365.com",
